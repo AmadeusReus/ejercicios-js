@@ -1,5 +1,6 @@
 /*
 1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+
 const contador = (cadena) => 
 !cadena? console.warn("escribe algo")
 :console.info(cadena.length);
@@ -9,20 +10,113 @@ contador("hola mundo");
 
 2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
 
-
-
-
-
-
-
-
-
+const recortarTexto = (cadena, numero) => {
+  if(!cadena){
+    console.warn("escribe tu texto");
+  }else{
+        if(!numero){
+        console.warn("escribe el numero de caracteres a recortar");
+        }else{
+        let cadenaRecortada = cadena.slice(0,numero);
+        console.info(cadenaRecortada);
+        }
+       }
+}
+recortarTexto("hola mundo", 4);
 
 
 3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+
+const convertirTexto = (cadena, espacio) => {
+ if(!cadena){
+    console.warn("escribe tu texto");
+  }else{
+    if(!espacio){
+      console.warn("coloca el espacio para dividir la cadena en mas arrays, sin espacio todos los caracteres se vuelven array")
+    }
+  let cadenaArray = cadena.split(espacio);
+  console.info(cadenaArray);
+  }
+}
+convertirTexto("hola que tal", " ");
+
+
 4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+
+const repetirTexto = (cadena, numero) => {
+cadena += " "; 
+  if(!cadena){
+    console.warn("escribe tu texto");
+  }else{
+    if(!numero){
+      console.warn("recuerda escribir cuantas veces quieres repetir el texto");
+    }
+console.info(cadena.repeat(numero));
+  }
+  }
+repetirTexto("hola mundo", 3);
+
+
+
 5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+
+const invertirPalabras = (cadena) => !cadena? console.warn("escribe tu cadena de texto"):console.info(cadena.split('').reverse().join(''));
+
+invertirPalabras("Hola Mundo");
+
+
+
 6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+
+const contarPalabraRepetida = (texto, repetida) =>{
+   let cadena1 = texto.split(' ');
+ let cadenaParaContar = [];
+  if(!texto){
+    console.warn("escribe tu texto");
+  }else{
+    if(!repetida){
+      console.warn("escribe la palabra para poder buscarla");
+    }
+    for(let i=0; i<cadena1.length; i++){
+      if(cadena1[i] === repetida){
+        cadenaParaContar.push(repetida);
+      }
+    }
+  }
+  console.info(`la palabra "${repetida}" se repite ${cadenaParaContar.length} veces`);
+}
+
+contarPalabraRepetida("un diablo se cayo al agua y otro diablo lo saco y otro diablo que pasaba dijo ¿que diablos paso?", "diablo");  
+
+
 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 */
