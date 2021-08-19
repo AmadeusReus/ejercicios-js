@@ -91,32 +91,28 @@ contarPalabraRepetida("un diablo se cayo al agua y otro diablo lo saco y otro di
 
 7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
 
-
-
-
-
-
-
-
-
-
-
-
+const siEsPalindromo = (cadena ="") => {
+  let texto = cadena.split('').reverse().join('').toLowerCase().replaceAll(" ","").replaceAll(",","").replaceAll(".","");
+  let cadenaDigitada = cadena.toLowerCase().replaceAll(" ","").replaceAll(",","").replaceAll(".","");
+   
+  if(cadenaDigitada === texto){
+    console.info(`la cadena de texto '${cadena}' SI es un palíndromo`);
+  }else{ console.info("No es un palindromo")}
+  
+}
+siEsPalindromo("Roma ni se conoce sin oro, ni se conoce sin amor.");
 
 
 8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
 
+const eliminarPatron = (cadena, borrado) =>{
+  if(typeof cadena === 'string' && cadena != ""){
+  let nuevaCadena = cadena.replaceAll(borrado,"");
+  console.info(`Su nueva cadena es "${nuevaCadena}"`)
+  }else{console.warn("tienes que escribir alguna cadena de texto");}
+}
 
-
-
-
-
-
-
-
-
-
-
+eliminarPatron("arroz hola arroz arroz mundo arroz planeta arroz tierra", "arroz");
 
 
 */
