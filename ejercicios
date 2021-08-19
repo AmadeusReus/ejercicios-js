@@ -1,5 +1,5 @@
-/*
-1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
+
+//1) Programa una función que cuente el número de caracteres de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá 10.
 
 const contador = (cadena) => 
 !cadena? console.warn("escribe algo")
@@ -8,7 +8,7 @@ const contador = (cadena) =>
 contador("hola mundo");
 
 
-2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
+//2) Programa una función que te devuelva el texto recortado según el número de caracteres indicados, pe. miFuncion("Hola Mundo", 4) devolverá "Hola".
 
 const recortarTexto = (cadena, numero) => {
   if(!cadena){
@@ -25,7 +25,7 @@ const recortarTexto = (cadena, numero) => {
 recortarTexto("hola mundo", 4);
 
 
-3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
+//3) Programa una función que dada una String te devuelva un Array de textos separados por cierto caracter, pe. miFuncion('hola que tal', ' ') devolverá ['hola', 'que', 'tal'].
 
 const convertirTexto = (cadena, espacio) => {
  if(!cadena){
@@ -41,7 +41,7 @@ const convertirTexto = (cadena, espacio) => {
 convertirTexto("hola que tal", " ");
 
 
-4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
+//4) Programa una función que repita un texto X veces, pe. miFuncion('Hola Mundo', 3) devolverá Hola Mundo Hola Mundo Hola Mundo.
 
 const repetirTexto = (cadena, numero) => {
 cadena += " "; 
@@ -58,7 +58,7 @@ repetirTexto("hola mundo", 3);
 
 
 
-5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
+//5) Programa una función que invierta las palabras de una cadena de texto, pe. miFuncion("Hola Mundo") devolverá "odnuM aloH".
 
 const invertirPalabras = (cadena) => !cadena? console.warn("escribe tu cadena de texto"):console.info(cadena.split('').reverse().join(''));
 
@@ -66,7 +66,7 @@ invertirPalabras("Hola Mundo");
 
 
 
-6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
+//6) Programa una función para contar el número de veces que se repite una palabra en un texto largo, pe. miFuncion("hola mundo adios mundo", "mundo") devolverá 2.
 
 const contarPalabraRepetida = (texto, repetida) =>{
    let cadena1 = texto.split(' ');
@@ -89,7 +89,7 @@ const contarPalabraRepetida = (texto, repetida) =>{
 contarPalabraRepetida("un diablo se cayo al agua y otro diablo lo saco y otro diablo que pasaba dijo ¿que diablos paso?", "diablo");  
 
 
-7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
+//7) Programa una función que valide si una palabra o frase dada, es un palíndromo (que se lee igual en un sentido que en otro), pe. mifuncion("Salas") devolverá true.
 
 const siEsPalindromo = (cadena ="") => {
   let texto = cadena.split('').reverse().join('').toLowerCase().replaceAll(" ","").replaceAll(",","").replaceAll(".","");
@@ -103,7 +103,7 @@ const siEsPalindromo = (cadena ="") => {
 siEsPalindromo("Roma ni se conoce sin oro, ni se conoce sin amor.");
 
 
-8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+//8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
 
 const eliminarPatron = (cadena, borrado) =>{
   if(typeof cadena === 'string' && cadena != ""){
@@ -115,4 +115,4 @@ const eliminarPatron = (cadena, borrado) =>{
 eliminarPatron("arroz hola arroz arroz mundo arroz planeta arroz tierra", "arroz");
 
 
-*/
+
