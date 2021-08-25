@@ -156,3 +156,41 @@ factorial(2);
 factorial(3);
 factorial(4);
 factorial(5);
+
+
+
+
+Día 1
+Inserción de código javascript. Consulta la página http://javascript.internet.com y realiza tres páginas distintas que incorporen cada una de ellas una aplicacion javascript de las que se ofrecen gratuitamente en esta página web.
+Primera página con Javascript. Realiza una página que contenga código JavaScript para escribir en el documento directamente el mensaje “Hola a todos”. Introduce comentarios en el código JavaScript haciendo uso de los símbolos siguientes // y /*. Repetir la página utilizando una función para escribir el texto, que se invoque cuando se entra en la página (onLoad).
+Barra de estado. Realiza una página que muestre un mensaje en la barra de estado. Modifica la función para que el mensaje se desplace por la barra de estado.
+Pulsar botón. Realiza una página que muestre el mensaje “Hola a todos” en una ventana haciendo una llamada a una función JavaScript. Utilizar la función Alert().
+Entrada y salida de página. Realiza una página que muestre el mensaje "Bienvenido" al entrar en la página y muestre el mensaje "Adios" al salir de la página.
+Cálculo de números primos. Realiza una página para calcular los números primos entre 1 y 100.
+Día 2
+OnMouseOver(). Realiza una página que muestre cinco cuadrados de diferentes colores. Cuando el raton pase por encima de alguno de ellos el color de fondo será del color de relleno del cuadrado.
+Conversor monetario. Realiza una página que muestre un formulario para la conversión de Euros a Pesetas o viceversa. Los campos del formulario han de poder ser limpiados.
+Password. Realiza una página que muestre una entrada protegida con password a un web.
+Saludo. Realiza una página que pregunte el nombre de entrada y muestre una página con un saludo con la fuente Comic Sans y de tamaño 10. Distinguir la hora del día para saber si es por la mañana, por la tarde o por la noche.
+Opcionales (si terminas los de clase, o para hacer en casa)
+Medios
+Arrays. Leer una cadena de texto en un formulario y generar un array con la función split(). Posteriormente, mostrar la siguiente información: Número de palabras, primera palabra, última palabra, las palabras colocadas en orden inverso, las palabras ordenadas de la a la z y las palabras ordenadas de la z a la a. Sacar toda esta información en una ventana nueva.
+Coordenadas de ratón en la barra de estado. Realiza una página que capture las coordenadas de ratón y las muestre en la barra de estado.
+Reloj edit box. Realiza una página que muestre la fecha y la hora actual en un reloj que se va actualizando.
+Verficación formulario. Realiza una página que muestre un formulario y verifique la entrada de un número que esté comprendido entre 1..100.
+Test radio button. Realiza una página que efectúe test de evaluación a través de radio button de tres opciones. La página prporcionará la evaluación y las respuesta correctas a petición del usuario.
+Calculadora tabla formulario. Realiza una página implemente una calculadora aritmética. Para ello haz uso de una tabla y un formulario.
+Cambio de imágenes. Realiza una página que muestre una imagen que cambie cuando el ratón en pase por encima de la imagen y que vuelva a cambiar cuando salga de ella.
+Dado. Hacer una página que simule el lanzamiento de un dado.
+Esconder elementos. Realiza una página haga desaparecer elementos al paso del ratón y los muestre con un click de ratón sobre texto.
+Formulario Select. Realizar una página que permita modificar (añadir, borrar, modificar) al gusto del usuario los contenidos de un elemento SELECT de un formulario.
+Posición y tamaño. Realizar una página que permita controlar la posición y tamaño de otra ventana a través de un pequeño formulario.
+Estadística de cadenas de texto. Realiza una página que contenga una función JavaScript para hacer estadísticas sobre una cadena de texto que se le pase, contando el número de veces que aparece cada letra. Utilizar un Array para almacenar la información estadística.
+Avanzados
+Fotoslider. Realiza una página que muestre un proyector de fotografias.
+Capa. Realiza una página que ponga una imagen en el puntero del ratón haciendo uso de capas.
+Pillar boton. Realiza una página implemente que muestre un botón que se resista a ser pulsado.
+Ojos. Realiza una página que muestre una cara cuyos ojos sigan al cursor del ratón en su movimiento.
+Tres en raya. Realiza una página que muestre un tablero de botones de tres por tres para jugar a las tres en raya.
+Puzzle. Hacer un juego de un puzle con una tabla de 4x4 y las imágenes correspondientes del 1 al 15, dejando un hueco para el movimiento.
+Paleta colores. Realiza una página que muestre una paleta de colores y que al seleccionar con el ratón un color cambie el color de fondo de la página.
