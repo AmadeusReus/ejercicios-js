@@ -178,6 +178,12 @@ const primo = (numero) => {
 
 
 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+
+const par = (numero=undefined) => numero%2===0
+? console.info(`numero ${numero} es PAR`) 
+: console.info(`numero >>>>>${numero}<<<<<< es Impar`);
+
+
 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
 
 Día 1
