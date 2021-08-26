@@ -175,7 +175,7 @@ const primo = (numero) => {
     console.info(`efectivamente, "${numero}" sí es un numero primo`);
   }
 }
-
+primo(17);
 
 13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
 
@@ -183,8 +183,23 @@ const par = (numero=undefined) => numero%2===0
 ? console.info(`numero ${numero} es PAR`) 
 : console.info(`numero >>>>>${numero}<<<<<< es Impar`);
 
+par(2);
+
 
 14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+
+const temperatura = (grados=undefined, medida="") =>{
+    let fahrenheit = grados;
+   let celsius = grados;
+   if(medida==="C"){
+     fahrenheit = ((9/5)*celsius)+32;
+     return `la temperatura es ${fahrenheit}°F`;
+   }else if(medida==="F"){
+     celsius = (5*(fahrenheit-32))/9;
+     return `la temperatura es ${celsius}°C`;
+   }
+ }
+ temperatura(0,"C");
 
 Día 1
 Inserción de código javascript. Consulta la página http://javascript.internet.com y realiza tres páginas distintas que incorporen cada una de ellas una aplicacion javascript de las que se ofrecen gratuitamente en esta página web.
