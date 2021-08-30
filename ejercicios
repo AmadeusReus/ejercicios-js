@@ -202,6 +202,49 @@ const temperatura = (grados=undefined, medida="") =>{
  temperatura(0,"C");
  
  15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
+ 
+ const conversion = (numero, base) =>{//hay un problemita cuando colocas el numero cero una o varias veces desde la primera posicion, todavia no se como arreglarlo
+
+  let arrayNumero = numero.toString().split('');//convertir primero en string y luego en array los elementos del parametro numero ingresados
+  if(base===2){
+    
+  let arrNumInverso = arrayNumero.reverse();//invertir el array creado en arrayNumero
+   let arrayReNumero = [];//array vacio donde se colocaran los string dentro del array arrNumInverso, reconvertidos en numeros;
+   for(let i=0; i< arrNumInverso.length; i++){//bucle para reconvertir de string a numero cada uno de los elementos del array invertido
+    arrayReNumero.push(parseInt(arrNumInverso[i]));
+  }//console.log(arrayNumero)
+   //console.log(arrNumInverso);// este array contiene los elementos en forma de string
+    //console.log(arrayReNumero);// este array tiene los elementos reconvertidos en numeros enteros y en forma inversa a como fueron ingresados
+  let CABinario = 0; //variable inicializada en cero, en donde se va a guardar el resultado de la operacion de binario a decimal
+ for(let i=0; i<arrayReNumero.length; i++){//bucle donde se hace la operacion de conversion
+   if(arrayReNumero[i]===1){
+     CABinario += 2**i; 
+   }
+   
+ }
+  return CABinario;
+}
+  //////////////////////////////////////////////////////////////
+  if(base===10){
+    let contador=0;
+    let CADecimal =numero;
+    for(let i=0; i<10; i++){
+      
+      
+      if(CADecimal/2===1){
+        break;
+      }else{
+        CADecimal /= 2;
+        contador++;
+      }
+      console.log(contador+"veces"+CADecimal)
+      
+    }
+    console.log(contador)
+    
+  }
+  
+}
 16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
 
