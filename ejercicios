@@ -103,7 +103,7 @@ const siEsPalindromo = (cadena ="") => {
 siEsPalindromo("Roma ni se conoce sin oro, ni se conoce sin amor.");
 
 
-//8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5.
+//8) Programa una función que elimine cierto patrón de caracteres de un texto dado, pe. miFuncion("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz") devolverá  "1, 2, 3, 4 y 5./////////////
 
 const eliminarPatron = (cadena, borrado) =>{
   if(typeof cadena === 'string' && cadena != ""){
@@ -115,7 +115,7 @@ const eliminarPatron = (cadena, borrado) =>{
 eliminarPatron("arroz hola arroz arroz mundo arroz planeta arroz tierra", "arroz");
 
 
-9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
+9) Programa una función que obtenga un numero aleatorio entre 501 y 600./////////////////////////////////////
 
 const aleatorio = () =>{
 let numeroAleatorio = 500+Math.round((Math.random()*99)+1);
@@ -124,7 +124,7 @@ let numeroAleatorio = 500+Math.round((Math.random()*99)+1);
 aleatorio();
 
 
-10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
+10) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.//////////////////////////
 
 
 const esCapicua = (numero="") =>{
@@ -136,7 +136,7 @@ const esCapicua = (numero="") =>{
 esCapicua(17371);
 
 
-11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.
+11) Programa una función que calcule el factorial de un número (El factorial de un entero positivo n, se define como el producto de todos los números enteros positivos desde 1 hasta n), pe. miFuncion(5) devolverá 120.///////////////////////
 
 
 const factorial = (numero ="") => {
@@ -158,7 +158,7 @@ factorial(4);
 factorial(5);
 
 
-12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true.
+12) Programa una función que determine si un número es primo (aquel que solo es divisible por sí mismo y 1) o no, pe. miFuncion(7) devolverá true./////////////////////
 
 const primo = (numero) => {
    if(numero===1){
@@ -177,7 +177,7 @@ const primo = (numero) => {
 }
 primo(17);
 
-13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.
+13) Programa una función que determine si un número es par o impar, pe. miFuncion(29) devolverá Impar.///////////////////////////////////////////
 
 const par = (numero=undefined) => numero%2===0
 ? console.info(`numero ${numero} es PAR`) 
@@ -186,7 +186,7 @@ const par = (numero=undefined) => numero%2===0
 par(2);
 
 
-14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F.
+14) Programa una función para convertir grados Celsius a Fahrenheit y viceversa, pe. miFuncion(0,"C") devolverá 32°F./////////////////////////////////////////
 
 const temperatura = (grados=undefined, medida="") =>{
     let fahrenheit = grados;
@@ -202,7 +202,7 @@ const temperatura = (grados=undefined, medida="") =>{
  temperatura(0,"C");
  
  
- 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10.
+ 15) Programa una función para convertir números de base binaria a decimal y viceversa, pe. miFuncion(100,2) devolverá 4 base 10./////////////////////////////////////////
  
 
 const conversion = (numero=undefined, base=undefined) =>{//hay un problemita cuando colocas el numero cero una o varias veces desde la primera posicion, todavia no se como arreglarlo :c
@@ -256,8 +256,28 @@ const conversion = (numero=undefined, base=undefined) =>{//hay un problemita cua
 
 
 
-16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.
-17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).
+16) Programa una función que devuelva el monto final después de aplicar un descuento a una cantidad dada, pe. miFuncion(1000, 20) devolverá 800.////////////////////////////////
+
+
+const hacerDescuento = (valor,descuento) =>{
+  if(typeof valor!=='number'|| !valor){
+    return 'escribe un valor numerico para hacer el descuento';
+  }
+  if(typeof descuento!=='number'){
+    return 'el descuento tiene que ser un valor numerico';
+  }
+  if(descuento<0||descuento>100){
+    return 'el descuento no puede ser aplicado';
+  }
+  
+  let porcentaje = descuento/100;
+  let valorFinal = valor-(valor*porcentaje);
+  return "el valor con el descuento aplicado es: >> $"+valorFinal+" <<, se hizo un descuento del "+descuento+" %  al valor $"+valor;
+}
+
+
+
+17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).////////
 
 
 Día 1
