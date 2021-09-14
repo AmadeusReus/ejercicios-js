@@ -280,6 +280,24 @@ const hacerDescuento = (valor,descuento) =>{
 17) Programa una función que dada una fecha válida determine cuantos años han pasado hasta el día de hoy, pe. miFuncion(new Date(1984,4,23)) devolverá 35 años (en 2020).////////
 
 
+const x = (fecha) => {
+    let fechaActual = Date.now();
+    let pasado = Date.parse(fecha);
+    let tiempoTranscurrido = (fechaActual - pasado) / 3.154e10;
+    let resultado = Math.floor(tiempoTranscurrido);
+
+    console.info(`Han pasado ${resultado} años`);
+  
+}
+x(new Date(1998,1,15));
+
+
+
+
+
+
+
+
 Día 1
 Inserción de código javascript. Consulta la página http://javascript.internet.com y realiza tres páginas distintas que incorporen cada una de ellas una aplicacion javascript de las que se ofrecen gratuitamente en esta página web.
 Primera página con Javascript. Realiza una página que contenga código JavaScript para escribir en el documento directamente el mensaje “Hola a todos”. Introduce comentarios en el código JavaScript haciendo uso de los símbolos siguientes // y /*. Repetir la página utilizando una función para escribir el texto, que se invoque cuando se entra en la página (onLoad).
