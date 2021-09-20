@@ -293,7 +293,29 @@ x(new Date(1998,1,15));
 
 
 //18) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+
+
+const contadorLetras = (cadena) =>{
+ if(!cadena || typeof cadena !== 'string'){return "coloca una cadena de texto valida"}
+ 
+  let vocales = 0;
+  let consonantes = 0;
+  for(let i=0; i<cadena.length; i++){
+    if(cadena[i]===" "){continue;}
+    if(cadena[i]==="a" || cadena[i]==="e" || cadena[i]==="i" || cadena[i]==="o" || cadena[i]==="u"){
+      vocales++;
+    }else{
+      consonantes++;
+    }
+  }
+  return `Vocales: ${vocales}, Consonantes: ${consonantes}`; 
+}
+contadorLetras("Hola Mundo");
+
+
 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
+
+
 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
 
 
