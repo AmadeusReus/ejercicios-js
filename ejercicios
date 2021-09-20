@@ -315,8 +315,27 @@ contadorLetras("Hola Mundo");
 
 19) Programa una función que valide que un texto sea un nombre válido, pe. miFuncion("Jonathan MirCha") devolverá verdadero.
 
+const nombreValido = (nombre="") =>{
+  if(!nombre){return `Ingresa una cadena de texto`};
+  if(typeof nombre !== "string" ){return `Ingresa solo cadenas de texto para el nombre`};
+  
+  return `Nombre: ${nombre} es un nombre válido`;
+}
+nombreValido("Miguel Herrera");
+
 
 20) Programa una función que valide que un texto sea un email válido, pe. miFuncion("jonmircha@gmail.com") devolverá verdadero.
+
+const emailValido = (email="") =>{
+  if(!email){return `Ingresa un email`};
+  if(typeof email !== "string"){return `Ingresa un correo electronico valido`};
+  if(email.includes("@")){
+    return `el email ${email} ha sido validado`;
+  }else{
+    return `correo electronico invalido`;
+  }
+  
+}
 
 
 
