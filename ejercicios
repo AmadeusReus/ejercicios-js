@@ -468,6 +468,25 @@ for(let num of arr){
 ordenar([7, 5,7,8,6,500,44])
 
 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+
+const eliduplic = (arr=undefined)=>{
+  if(arr===undefined)return console.warn("no ingresaste un arreglo");
+if(!(arr instanceof Array)) return console.error("el valor que ingresaste no es un arreglo");
+if(arr.length ===0) return console.error("el arreglo esta vacio");
+////
+ let narray = [];
+  for(let i=0; i<arr.length; i++){
+   narray.push(arr[i]);
+  for(el of narray){
+    if(el===arr[i+1]){
+      narray.splice(narray.indexOf(el),1);
+    }
+  }
+  }
+  return narray;
+}
+
+
 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
 
 
