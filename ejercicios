@@ -489,6 +489,22 @@ if(arr.length ===0) return console.error("el arreglo esta vacio");
 
 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
 
+const promedio = (arr=undefined)=>{
+  if(arr===undefined)return console.warn("no ingresaste un arreglo de numeros");
+if(!(arr instanceof Array)) return console.error("el valor que ingresaste no es un arreglo");
+if(arr.length ===0) return console.error("el arreglo esta vacio");
+for(let num of arr){
+  if(typeof num !== "number") return console.error(`el valor "${num}" ingresado, No es un numero`);
+}
+////
+  let sum=0;
+  let prom = arr.length;
+for(el of arr){
+   sum += el;
+}
+  return sum/prom;
+}
+
 
 Día 1
 Inserción de código javascript. Consulta la página http://javascript.internet.com y realiza tres páginas distintas que incorporen cada una de ellas una aplicacion javascript de las que se ofrecen gratuitamente en esta página web.
