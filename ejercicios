@@ -533,6 +533,61 @@ año de estreno, país o países de origen, géneros y calificación en IMBD.
 * Géneros Aceptados: Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, 
 Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western.
 
+
+class pelicula{
+  constructor(
+  { id,
+    titulo,
+    director,
+    estreno,
+    p_origen,
+    genero,
+    calificacion
+  }){
+    this.id = id;
+    this.titulo = titulo;
+    this.director = director;
+    this.estreno = estreno;
+    this.p_origen = p_origen;
+    this.genero = genero;
+    this.calificacion = calificacion;
+    if(!this.id || !this.titulo || !this.director || !this.estreno || !this.p_origen || !this.genero || !this.calificacion){
+      return `tienes que escribir la informacion completa por favor`;
+    }
+    if(this.id.length === 8){
+      for(let i=0; i<2; i++){
+        if(!(typeof this.id[i] === string)){
+          return `el Id IMBD es erroneo, no puede empezar con letras`;
+        }
+      }
+      for(let i=2; i<9; i++){
+        if(!(typeof this.id[i]=== number)){
+          return `el Id IMBD es un codigo que consta de 2 letras y 7 numeros, revisalo`;
+        }
+      }
+    }
+    if(this.titulo.length===0 || this.titulo.length>100){return `el titulo es muy largo o no existe, revisalo`;}
+    if(this.director.length===0 || this.director>50){return `el nombre del director es muy largo o no existe, revisalo`;}
+    if(!(typeof this.estreno === number && (this.estreno>999 && this.estreno<10000))){return `el año de estreno es incorrecto, revisalo por favor`;}
+    if(!(this.p_origen instanceof Array)){return `el pais o paises de origen tienen que ser ingresados en un array`;}
+    if(!(this.genero instanceof Array)){
+      return `Los generos tienen que ser ingresados en un array`;
+    }else{ for(ele of this.genero){
+      if(ele != genAceptados()){
+        return `la pelicula no contiene generos aceptados`;
+      }
+     }
+   }
+    
+    
+  }
+  static genAceptados(){
+    return [Action, Adult, Adventure, Animation, Biography, Comedy, Crime, Documentary ,Drama, Family, 
+Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western];
+  }
+  
+}
+
 Día 1
 Inserción de código javascript. Consulta la página http://javascript.internet.com y realiza tres páginas distintas que incorporen cada una de ellas una aplicacion javascript de las que se ofrecen gratuitamente en esta página web.
 Primera página con Javascript. Realiza una página que contenga código JavaScript para escribir en el documento directamente el mensaje “Hola a todos”. Introduce comentarios en el código JavaScript haciendo uso de los símbolos siguientes // y /*. Repetir la página utilizando una función para escribir el texto, que se invoque cuando se entra en la página (onLoad).
