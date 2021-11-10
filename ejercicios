@@ -551,6 +551,8 @@ class pelicula{
     this.p_origen = p_origen;
     this.genero = genero;
     this.calificacion = calificacion;
+    
+   }
     if(!this.id || !this.titulo || !this.director || !this.estreno || !this.p_origen || !this.genero || !this.calificacion){
       return `tienes que escribir la informacion completa por favor`;
     }
@@ -577,8 +579,7 @@ class pelicula{
         return `la pelicula no contiene generos aceptados`;
       }
      }
-   }
-    
+    if((this.calificacion<0.0 || this.calificacion>10.1)&& typeof this.calificacion === number){return `la calificacion dada no es valida`}
     
   }
   static genAceptados(){
@@ -586,7 +587,12 @@ class pelicula{
 Fantasy, Film Noir, Game-Show, History, Horror, Musical, Music, Mystery, News, Reality-TV, Romance, Sci-Fi, Short, Sport, Talk-Show, Thriller, War, Western];
   }
   
+  fichaTecnica(){
+    return [this.id, this.titulo, this.director, this.estreno, this.p_origen, this.genero, this.calificacion]
+  }
+  
 }
+
 
 Día 1
 Inserción de código javascript. Consulta la página http://javascript.internet.com y realiza tres páginas distintas que incorporen cada una de ellas una aplicacion javascript de las que se ofrecen gratuitamente en esta página web.
